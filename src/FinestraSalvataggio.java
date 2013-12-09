@@ -13,7 +13,7 @@ public class FinestraSalvataggio extends JFileChooser{
             int result = JOptionPane.showConfirmDialog(this,"Il file esiste, vuoi sovrascriverlo?","Il file esiste",JOptionPane.YES_NO_OPTION);
             switch(result){
                 case JOptionPane.YES_OPTION:
-                    super.approveSelection();
+                    
                     return;
                 case JOptionPane.NO_OPTION:
                     return;
@@ -21,6 +21,7 @@ public class FinestraSalvataggio extends JFileChooser{
                     return;
             }
         }
+        super.approveSelection();
     }
     
 }
