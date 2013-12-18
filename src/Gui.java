@@ -93,58 +93,20 @@ public class Gui extends JFrame {
 		btnStampaFattura.addActionListener(new AscoltatoreTasto(this));
 		btnStampaFattura.setBounds(437, 341, 142, 29);
 		contentPane.add(btnStampaFattura);
-		
-		fatt = new JTextPane();
-		fatt.setEditable(false);
-		fatt.setContentType("text/html");
-		fatt.setBounds(609, 49, 535, 280);
-		contentPane.add(fatt);
-		
 		JLabel lblAnteprimaFattura = new JLabel("Anteprima Fattura");
 		lblAnteprimaFattura.setBounds(821, 19, 124, 16);
 		contentPane.add(lblAnteprimaFattura);
 		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(610, 49, 502, 280);
+		contentPane.add(scrollPane_1);
+		
+		fatt = new JTextPane();
+		scrollPane_1.setViewportView(fatt);
+		fatt.setEditable(false);
+		fatt.setContentType("text/html");
+		
 		righe= new ArrayList<Record>();
-		
-		
-		
-//		JLabel lblNewLabel = new JLabel(r.getCodice());
-//		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-//		gbc_lblNewLabel.weightx = 5.0;
-//		gbc_lblNewLabel.insets = new Insets(0, 0, 0, 5);
-//		gbc_lblNewLabel.gridx = 0;
-//		gbc_lblNewLabel.gridy = 0;
-//		panel.add(lblNewLabel, gbc_lblNewLabel);
-//		
-//		JLabel label = new JLabel(r.getDesc());
-//		GridBagConstraints gbc_label = new GridBagConstraints();
-//		gbc_label.weightx = 5.0;
-//		gbc_label.insets = new Insets(0, 0, 0, 5);
-//		gbc_label.gridx = 3;
-//		gbc_label.gridy = 0;
-//		panel.add(label, gbc_label);
-//		
-//		JLabel label_1 = new JLabel(""+r.getDisp());
-//		GridBagConstraints gbc_label_1 = new GridBagConstraints();
-//		gbc_label_1.weightx = 4.0;
-//		gbc_label_1.insets = new Insets(0, 0, 0, 5);
-//		gbc_label_1.gridx = 6;
-//		gbc_label_1.gridy = 0;
-//		panel.add(label_1, gbc_label_1);
-//		
-//		GridBagConstraints gbc_chckbxNewCheckBox = new GridBagConstraints();
-//		gbc_chckbxNewCheckBox.insets = new Insets(0, 0, 0, 5);
-//		gbc_chckbxNewCheckBox.gridx = 12;
-//		gbc_chckbxNewCheckBox.gridy = 0;
-//		panel.add(r, gbc_chckbxNewCheckBox);
-//		
-//		JLabel label_2 = new JLabel(""+r.getPrezzo());
-//		GridBagConstraints gbc_label_2 = new GridBagConstraints();
-//		gbc_label_2.weightx = 5.0;
-//		gbc_label_2.insets = new Insets(0, 0, 0, 5);
-//		gbc_label_2.gridx = 10;
-//		gbc_label_2.gridy = 0;
-//		panel.add(label_2, gbc_label_2);
 		
 		
 		setVisible(true);
